@@ -1,0 +1,26 @@
+body {
+    margin:0;
+}
+
+.artboard {
+    display:inline-block;
+    position:relative;
+}
+    canvas {
+        display:block;
+        image-rendering: pixelated;
+    }
+    .artboard__interface {
+        position:absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        overflow:hidden;
+    }
+    .artboard__circle {
+        position:absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1.4px #fff inset;
+        overflow:hidden;
+    }

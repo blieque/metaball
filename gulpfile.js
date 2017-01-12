@@ -8,6 +8,11 @@ gulp.task('markup', () => {
         .pipe(gulp.dest(`${outputDir}/`));
 });
 
+gulp.task('styles', () => {
+    return gulp.src('*.css')
+        .pipe(gulp.dest(`${outputDir}/`));
+});
+
 gulp.task('scripts', () => {
     return gulp.src('*.js')
         .pipe(gulp.dest(`${outputDir}/`));
@@ -16,6 +21,7 @@ gulp.task('scripts', () => {
 gulp.task('watch', () => {
     gulp.watch('index.html', ['markup']);
     gulp.watch('*.js', ['scripts']);
+    gulp.watch('*.css', ['styles']);
 });
 
-gulp.task('default', ['markup', 'scripts', 'watch']);
+gulp.task('default', ['markup', 'styles', 'scripts', 'watch']);
