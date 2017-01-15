@@ -1,0 +1,19 @@
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1.4px #fff inset;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+
+    &__resize,
+    &__move {
+        height: 50%;
+        mix-blend-mode: screen;
+        transition: ease all 0.2s;
+
+        &.circle__control--hover,
+        &:hover {
+            background-color: #fff;
+        }
+    }
+}

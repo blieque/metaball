@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "An experiment with metaballs and HTML5 canvas.",
   "main": "",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/blieque/metaball.git"
@@ -16,6 +15,9 @@
   },
   "homepage": "https://github.com/blieque/metaball#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.0"
   }
 }
