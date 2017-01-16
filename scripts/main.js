@@ -37,8 +37,6 @@ const draw = function draw() {
                 score * 100
             ));
 
-            //if (index > 0) {
-            //}
             ctx.fillStyle = grades[index];
             ctx.fillRect(j, i, 1, 1);
         }

@@ -1,6 +1,6 @@
 .circle {
     position: absolute;
-    border-radius: 50%;
+    border-radius: 999em;
     box-shadow: 0 0 0 1.4px #fff inset;
     overflow: hidden;
     transform: translate(-50%, -50%);
@@ -15,5 +15,13 @@
         &:hover {
             background-color: #fff;
         }
+    }
+    &__resize {
+        border-radius: 999em 999em 0 0;
+        cursor: ns-resize;
+    }
+    &__move {
+        border-radius: 0 0 999em 999em;
+        cursor: move;
     }
 }

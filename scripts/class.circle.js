@@ -45,7 +45,7 @@ class Circle extends Point {
     }
 
     _updatePosition() {
-        this.r = Math.min(100, Math.max(10, this.r));
+        this.r = Math.min(256, Math.max(8, this.r));
         const diameterPx = `${this.r * 2}px`;
         this._el.circle.style.width = diameterPx;
         this._el.circle.style.height = diameterPx;
