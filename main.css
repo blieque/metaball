@@ -1,0 +1,40 @@
+body {
+  margin: 0; }
+
+.artboard {
+  display: inline-block;
+  position: relative;
+  transform-origin: 0 0; }
+  .artboard__canvas {
+    display: block;
+    image-rendering: pixelated;
+    z-index: 1; }
+  .artboard__interface {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 2; }
+
+.circle {
+  position: absolute;
+  border-radius: 999em;
+  box-shadow: 0 0 0 1.4px #fff inset;
+  overflow: hidden;
+  transform: translate(-50%, -50%); }
+  .circle__resize, .circle__move {
+    height: 50%;
+    mix-blend-mode: screen;
+    transition: ease all 0.2s; }
+    .circle__resize.circle__control--hover, .circle__resize:hover, .circle__move.circle__control--hover, .circle__move:hover {
+      background-color: #fff; }
+  .circle__resize {
+    border-radius: 999em 999em 0 0;
+    cursor: ns-resize; }
+  .circle__move {
+    border-radius: 0 0 999em 999em;
+    cursor: move; }
+
+/*# sourceMappingURL=main.css.map */
