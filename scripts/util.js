@@ -1,6 +1,3 @@
-const distance = function distance(aX, aY, bX, bY) {
-    return Math.sqrt(
-        ((aX - bX) ** 2) +
-        ((aY - bY) ** 2)
-    );
+const reducerSum = function reducerSum(acc, a) {
+    return acc + a;
 };
