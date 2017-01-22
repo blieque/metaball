@@ -29,7 +29,8 @@ const draw = function draw() {
     const samples = SAMPLING ** 2;
     const spacing = 1 / SAMPLING;
     const start = spacing / 2;
-    const averagingBuffer = [[], [], []];
+    const averagingBuffer = [];
+    const averagingBufferLast = [];
     for (let i = 0; i < el.canvas.height; i++) {
         for (let j = 0; j < el.canvas.width; j++) {
             averagingBuffer[0] = averagingBuffer[1] = averagingBuffer[2] = 0;
@@ -56,12 +57,21 @@ const draw = function draw() {
                 }
             }
 
-            const average = [
-                Math.round(averagingBuffer[0] / samples),
-                Math.round(averagingBuffer[1] / samples),
-                Math.round(averagingBuffer[2] / samples),
-            ];
-            ctx.fillStyle = `rgb(${average[0]},${average[1]},${average[2]})`;
+            if (averagingBuffer[0] !== averagingBufferLast[0] ||
+                averagingBuffer[1] !== averagingBufferLast[1] ||
+                averagingBuffer[2] !== averagingBufferLast[2]) {
+
+                averagingBufferLast[0] = averagingBuffer[0];
+                averagingBufferLast[1] = averagingBuffer[1];
+                averagingBufferLast[2] = averagingBuffer[2];
+
+                const average = [
+                    Math.round(averagingBuffer[0] / samples),
+                    Math.round(averagingBuffer[1] / samples),
+                    Math.round(averagingBuffer[2] / samples),
+                ];
+                ctx.fillStyle = `rgb(${average[0]},${average[1]},${average[2]})`;
+            }
             ctx.fillRect(j, i, 1, 1);
         }
     }

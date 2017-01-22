@@ -1,7 +1,7 @@
 // metaball experiment configuration
 
 const SCALE = 3;
-const SAMPLING = 2;
+const SAMPLING = 1;
 const CIRCLES_PROTOTYPE = [
     { x: 18,  y: 12, r: 7  },
     { x: 40,  y: 70, r: 14 },
